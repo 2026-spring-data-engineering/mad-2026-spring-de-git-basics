@@ -9,9 +9,9 @@ def pick_the_winners(raffle_tickets):
     bottom_80_percent = int(length * 0.8)
     top_20_percent = length - bottom_80_percent
     eliminated = raffle_tickets[:bottom_80_percent]
-    top_2_winners = raffle_tickets[:2]
+    top_2_winners = raffle_tickets[-2:]
     print(f"Top 2 winners are: {top_2_winners}")
-    keychain_winners = raffle_tickets[:top_20_percent]
+    keychain_winners = raffle_tickets[-top_20_percent:]
     print("Keychain winners are:", keychain_winners)
     print(f"Debugging... {raffle_tickets[0]} should not have won, and {raffle_tickets[-1]} should have won.")
 
