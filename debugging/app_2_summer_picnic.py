@@ -6,15 +6,11 @@ def pick_the_winners(raffle_tickets, raffle_names):
     randomizer = random.Random(42)
     indices = list(range(len(raffle_tickets)))
     randomizer.shuffle(indices)
+    raffle_tickets = raffle_tickets[indices]    #Applied the shuffled indices to the raffle_tickets array
+    raffle_names = raffle_names[indices]        #Applied the shuffled indices to the raffle_names array
     length = len(raffle_tickets)
     bottom_80_percent = int(length * 0.8)
     top_20_percent = length - bottom_80_percent
-    # Blanca here: The following will randomize the order of the tickets and names separately.
-    # The names should stay coordinated with the ticket numbers. Take out the following two lines
-    # and shuffle the indices instead. Please complete. I have to run on a business trip now. Sorry
-    # to leave you hanging.
-    randomizer.shuffle(raffle_tickets)
-    randomizer.shuffle(raffle_names)
     eliminated_tickets = raffle_tickets[:bottom_80_percent]
     eliminated_names = raffle_names[:bottom_80_percent]
     keychain_winner_numbers = raffle_tickets[-top_20_percent:]
