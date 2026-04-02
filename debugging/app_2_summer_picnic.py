@@ -1,6 +1,8 @@
 import random
 import numpy as np
 
+# Spent hours and hours debugging. Fixed it.
+
 
 def pick_the_winners(raffle_tickets, raffle_names):
     randomizer = random.Random(42)
